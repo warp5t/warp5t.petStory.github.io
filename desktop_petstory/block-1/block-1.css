@@ -1,0 +1,443 @@
+.page__watch-online {
+    /* position: relative; */
+    background-image: url('GiantPanda.jpg');
+    background-repeat: no-repeat;
+    background-position: left top 0px;
+    -moz-background-size: 100%;
+    /* Firefox 3.6+ */
+    -webkit-background-size: 100%;
+    /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%;
+    /* Opera 9.6+ */
+    background-size: 100%;
+    /* Современные браузеры */
+    min-height: 100%;
+    /* padding: auto; */
+    padding:0px 0px 5.9% 0px;
+}
+
+
+.watch-online {
+    position: relative;
+    z-index: 40;
+}
+
+@media(max-width:1000px){
+    .watch-online{
+        padding:0px 0px 4.1% 0px;
+    }
+}
+@media(max-width:960px){
+    .watch-online{
+        padding:0px 0px 10% 0px;
+    }
+}
+@media(max-width:640px){
+    .watch-online{
+        background-size:119%;
+        padding:0px 0px 6.5% 0px;
+    }
+}
+@media(max-width:620px){
+    .watch-online{
+        background-size:109%;
+        padding:0px 0px 15.9% 0px;
+    }
+}
+@media(max-width:615px){
+    .watch-online{
+        background-size:128%;
+        padding:0px 0px 11% 0px;
+    }
+}
+@media(max-width:320px){
+    .watch-online{
+        background-size:120%;
+        padding:0px 0px 21.3% 0px;
+    }
+}
+.watch-online__container {
+    /* height: 100%; */
+}
+._container {}
+
+.watch-online__body {
+    position: relative;
+    z-index: 2;
+    top: 12px;
+    margin: 0px 0px 0px 588px;
+    /* padding:0px 0px 0px 0px; */
+}
+@media(max-width:1110px){
+    .watch-online__body{
+        margin:0px 0px 0px 550px;
+        top:-5px;
+    }
+}
+@media(max-width:1000px){
+    .watch-online__body{
+        margin: 0px 0px 0px 456px;
+        top:-10px;
+    }
+}
+@media(max-width:960px){
+    .watch-online__body{
+        margin:0px 0px 0px 430px;
+    }
+}
+@media(max-width:800px){
+    .watch-online__body{
+        margin:0px 0px 0px 400px;
+    }
+}
+@media(max-width:720px){
+    .watch-online__body{
+        margin: 0px 0px 0px 331px;
+        top:10px;
+    }
+}
+@media(max-width:640px){
+    .watch-online__body{
+        margin: 0px 0px 0px 331px;
+        top:10px;
+    }
+}
+@media(max-width:620px){
+    .watch-online__body{
+        margin: 0px 0px 0px 305px;
+        top:35px;
+    }
+}
+@media(max-width:520px){
+    .watch-online__body{
+        margin: 0px 0px 0px 280px;
+        top:25px;
+    }
+}
+@media(max-width:498px){
+    .watch-online__body{
+        margin: 0px 0px 0px 250px;
+        top:22px;
+    }
+}
+@media(max-width:419px){
+    .watch-online__body{
+        margin: 0px 0px 0px 200px;
+        top:22px;
+    }
+}
+@media(max-width:365px){
+    .watch-online__body{
+        margin: 0px 0px 0px 163px;
+        top:22px;
+    }
+}
+.watch-online__title {
+    position: absolute;
+    display: block;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 106.496px;
+    line-height: 75%;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    margin: 74px 0px 0px 73px;
+}
+@media(max-width:1255px){
+    .watch-online__title{
+        margin: 53.8px 0px 0px 58px;
+        font-size: 85px;
+    }
+}
+@media(max-width:1000px){
+    .watch-online__title{
+        margin: 53.8px 0px 0px 58px;
+        font-size: 85px;
+    }
+}
+@media(max-width:960px){
+    .watch-online__title{
+        margin:45px 0px 0px 45px;
+        font-size:70px;
+    }
+}
+@media(max-width:800px){
+    .watch-online__title{
+        margin:40px 0px 0px 40px;
+        font-size:60px;
+    }
+}
+@media(max-width:720px){
+    .watch-online__title{
+        margin: 37px 0px 0px 37px;
+        font-size: 54.2894px;
+    }
+}
+@media(max-width:640px){
+    .watch-online__title{
+        margin: 37px 0px 0px 37px;
+        font-size: 54.2894px;
+    }
+}
+@media(max-width:620px){
+    .watch-online__title{
+        margin: 33px 0px 0px 33px;
+        font-size: 39px;
+    }
+}
+@media(max-width:498px){
+    .watch-online__title{
+        margin: 28px 0px 0px 28px;
+        font-size: 29px;
+    }
+}
+@media(max-width:365px){
+    .watch-online__title{
+        margin: 19px 0px 0px 19px;
+        font-size: 28px;
+    }
+}
+.word-recolor {
+    color: #FFEE2E;
+}
+
+.watch-online__button {
+    margin: 69px 0px 0px 176px;
+}
+.watch-online__wrap-button-640{
+    padding: 0;
+}
+@media(max-width:400px){
+    .watch-online__wrap-button-640{
+        padding: 0px 13px;
+        margin:0px 13px;
+    }
+}
+.watch-online__button-640{
+    position:relative;
+    display:none;
+    z-index: 1;
+}
+
+@media(max-width:1295px){
+    .watch-online__button{
+        margin: 47px 0px 0px 109px;
+    }
+}
+@media(max-width:1000px){
+    .watch-online__button {
+        margin: 47px 0px 0px 109px;
+    }
+}
+@media(max-width:960px){
+    .watch-online__button{
+        display:none;
+    }
+    .watch-online__button-640{
+        display: block;
+        position:absolute;
+        left:0;
+        bottom:0;
+        margin:0px 0px 40px 24px;
+    }
+}
+@media(max-width:640px){
+    .watch-online__button-640{
+        display: block;
+        position:absolute;
+        left:0;
+        bottom:0;
+        margin:37px 0px 0px 20px;
+    }
+    .watch-online__button{
+        display: none;
+    }
+}
+@media(max-width:620px){
+    .watch-online__button{
+        display: none;
+    }
+}
+@media(max-width:400px){
+    .watch-online__button-640{
+        margin:0px 0px -21% 0px;
+        z-index: 51;
+    }
+}
+@media(max-width:320px){
+    .watch-online__button-640{
+        display: block;
+        margin:0px 0px -74px 0px;
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 298px;
+    min-height: 54px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 25px;
+}
+@media(max-width:960px){
+    .button{
+        display:none;
+    }
+}
+@media(max-width:640px){
+    .button{
+        display:none;
+    }
+}
+.button-640 {
+    display: none;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    width: 298px;
+    min-height: 54px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 25px;
+    z-index: 1;
+}
+.watch-online__button-640:hover{
+    cursor: pointer;
+    background: #E47209;
+}
+@media(max-width:960px){
+    .button-640{
+        display:flex;
+    }
+}
+@media(max-width:640px){
+    .button-640{
+        display: flex;
+    }
+}
+@media(max-width:620px){
+    .button-640{
+        width: 250px;
+        min-height: 45px;
+    }
+}
+@media(max-width:498px){
+    .button-640{
+        width: 185px;
+        min-height: 38px;
+    }
+}
+@media(max-width:400px){
+    .button-640{
+        position:absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        min-height: 54px;
+    }
+}
+@media(max-width:320px){
+    .button-640{
+        display: flex;
+        left: 50%;
+        width:294px;
+    }
+}
+
+.watch-online__button:hover {
+    cursor: pointer;
+    background: #E47209;
+}
+
+.watch-online__button_text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+@media(max-width:498px){
+    .watch-online__button_text {
+        font-size: 12px;
+    }
+}
+@media(max-width:400px){
+    .watch-online__button_text{
+        font-size: 16px;
+    }
+}
+
+.watch-online__circle {
+    position: relative;
+    width: 465px;
+    height: 465px;
+    border-radius: 50%;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+}
+@media(max-width:1255px){
+    .watch-online__circle{
+        width:367px;
+        height:367px;
+        margin: 0px 0px 0px 0px;
+    }
+}
+@media(max-width:1000px){
+    .watch-online__circle{
+        width:367px;
+        height:367px;
+        margin: 0px 0px 0px 0px;
+    }
+}
+@media(max-width:960px){
+    .watch-online__circle{
+        width:300px;
+        height: 300px;
+    }
+}
+@media(max-width:800px){
+    .watch-online__circle{
+        width:250px;
+        height: 250px;
+    }
+}
+@media(max-width:720px){
+    .watch-online__circle{
+        width:237.6px;
+        height:237.6px;
+    }
+}
+@media(max-width:640px){
+    .watch-online__circle{
+        width:237.6px;
+        height:237.6px;
+    }
+}
+@media(max-width:620px){
+    .watch-online__circle{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media(max-width:498px){
+    .watch-online__circle{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media(max-width:365px){
+    .watch-online__circle{
+        width: 119px;
+        height: 119px;
+    }
+}

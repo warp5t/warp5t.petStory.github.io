@@ -1,0 +1,43 @@
+.to-left{
+    animation-name:left;
+    position: relative;
+}
+.from-right{
+    animation-name:right;
+    position: relative;
+}
+.to-right{
+    animation-name:right;
+    position: relative;
+    animation-direction:reverse;
+}
+.from-left{
+    animation-name:left;
+    position: relative;
+    animation-direction:reverse;
+}
+
+
+.active{
+    display: flex;
+}
+.inactive{
+    display: none;
+}
+@keyframes left{
+    from{
+        left:0;
+     }
+     to{
+        left:-100%;
+     }
+}
+@keyframes right{
+ from{
+    left:100%;
+ }
+ to{
+    left:0;
+ }
+}
+

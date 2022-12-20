@@ -1,0 +1,43 @@
+.wrapper-donate{
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container{
+
+    max-width: 1160px;
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+
+#page{
+    position: relative;
+    flex: 1 1 auto;
+    z-index: 1;
+}
+.page-wrap{
+    position:relative;
+    z-index: 0;
+}
+.page-shadow{
+    position: absolute;
+    top:0;
+    background-color: rgba(61, 61, 61, 0.6);
+    transition-duration: 0.4s;
+    width: 100%;
+    height: 0px;
+    z-index: 50;
+}
+h1 h3{
+    margin:0;
+}
+.shadow{
+    position: absolute;
+    top:0;
+    background-color: rgba(61, 61, 61, 0.6);
+    transition-duration: 0.4s;
+    width: 100%;
+    height: 0px;
+    z-index: 50;
+  }

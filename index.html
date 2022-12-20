@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../petStory/desktop_petstory/normalize/normalize_1.css">
+    <link rel="stylesheet" href="../petStory/desktop_petstory/common/common.css">
+    <link rel="stylesheet" href="../petStory/desktop_petstory/header/header.css">
+    <link rel="stylesheet" href="../petStory/desktop_petstory/block-1/block-1.css">
+    <link rel="stylesheet" href="../petStory/desktop_petstory/block-2/block-2.css">
+    <link rel="stylesheet" href="../petStory/desktop_petstory/block-3/block-3.css">
+    <link rel="stylesheet" href="../petStory/desktop_petstory/block-4/block-4.css">
+    <link rel="stylesheet" href="../petStory/desktop_petstory/slideShow/slideShow.css">
+    <link rel="stylesheet" href="../petStory/desktop_petstory/footer/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>Petstory</title>
+</head>
+
+<body class="body">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container _container">
+                <div class="header__subwrap">
+                    <div class="header__logo logo">
+                        <a href="index.html" class="logo">
+                            <div class="logo_container">
+                                <h1 class="logo-text">PetStory <br> online</h1>
+                                <img class="logo-image" src="../petStory/desktop_petstory/header/bamboo.svg" alt="logo">
+                            </div>
+                        </a>
+                    </div>
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="index.html" class="menu__link-about">About</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Map</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Zoos</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="../petStory/donate/index.html" class="menu__link">Donate</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Contact us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__last-item">
+                    <a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks"
+                        class="header__link link-last">Designed by ©</a>
+                </div>
+                <div class="header__burger-menu" onclick="openMenu()">
+                    <span></span>
+                </div>
+            </div>
+            <div class="header__shift-menu shift-menu">
+                <div class="header__logo-rebuild-burger">
+                    <a href="index.html" class="logo">
+                        <div class="logo_container-rebuild-burger">
+                            <h1 class="logo-text">PetStory <br> online</h1>
+                            <img class="logo-image-rebuild-burger" src="../petStory/desktop_petstory/header/bamboo-yellow.svg" alt="logo">
+                        </div>
+                    </a>
+                </div>
+                <nav class="shift-menu">
+                    <ul class="shift-menu__list">
+                        <li class="shift-menu__item">
+                            <a href="index.html" class="shift-menu__link">About</a>
+                        </li>
+                        <li class="shift-menu__item">
+                            <a href="#" class="shift-menu__link">Map</a>
+                        </li>
+                        <li class="shift-menu__item">
+                            <a href="#" class="shift-menu__link">Zoos</a>
+                        </li>
+                        <li class="shift-menu__item">
+                            <a href="../donate/index.html" class="shift-menu__link">Donate</a>
+                        </li>
+                        <li class="shift-menu__item">
+                            <a href="#" class="shift-menu__link">Contact us</a>
+                        </li>
+                        <li class="shift-menu__item">
+                            <a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks"
+                                class="shift-menu__link">Designed by ©</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="page">
+            <!-- -----------------------------------------block-1--------------------------- -->
+            <div class="page__watch-online watch-online">
+                <div class="shadow" onclick="closeShadow()"></div>
+                <div class="watch-online__container _container">
+                    <div class="watch-online__body">
+                        <div class="watch-online__circle">
+                            <h2 class="watch-online__title">
+                                Watch your
+                                <span class="word-recolor">favorite</span>
+                                animal online</h2>
+                        </div>
+                        <a href="#" class="watch-online__button button">
+                            <span class="watch-online__button_text">watch online</span>
+                        </a>
+                    </div>
+                    <a href="#" class="watch-online__button-640 button-640">
+                        <span class="watch-online__button_text">watch online</span>
+                    </a>
+                </div>
+            </div>
+            <!-- -----------------------------------------block-2-------------------------- -->
+            <section class="page__services services ">
+                <div class="services__about _container">
+                    <div class="services__wrap-box">
+                        <img src="../petStory/desktop_petstory/block-2/bamboo-cap.jpg" class="services__bamboo-cap" alt="bamboo-cap">
+                        <div class="services__wrap-info">
+                            <h3 class="services__title">The Backstage of the Wilderness World.</h3>
+                            <article class="services__text-title">
+                                The site was founded on the
+                                basis of a volunteer movement to protect and care for animals.
+                            </article>
+                            <h4 class="services__subtiltle">How it works</h4>
+                            <article class="services__text-subtitle">
+                                The main goal is to help the animals, as well as the nature
+                                reserves and zoos where they are kept. We are currently
+                                working on video projects targeting pandas in China, eagles
+                                on an island near Los Angeles, alligators in Florida and gorillas in <br
+                                    class="whiteSpace-0"> the Congo.
+                                These have a <br class="whiteSpace-1"> total of more than 1,500 mammals and reptiles.
+                            </article>
+                        </div>
+                    </div>
+                    <img src="../petStory/desktop_petstory/block-2/flower_foto1.png" class="services__flowers" alt="flower_foto">
+                    <img src="../petStory/desktop_petstory/block-2/adaptivePlantBlock2.png" class="services__flowers-adaptive" alt="flower_foto">
+                    <img src="../petStory/desktop_petstory/block-2/adaptivePlant-320.png" class="services__flowers-adaptive-320" alt="flower_foto">
+                </div>
+                <!-- -----------------------------------------favorite animal ---------------------------------->
+                <div class="services__favorite-animal _container">
+                    <div class="page__container-arrow">
+                        <div class="services__circle-arrow-L">
+                            <img src="../petStory/desktop_petstory/block-2/arrowL.svg" alt="arrowL">
+                        </div>
+                        <div class="services__circle-arrow-R">
+                            <img src="../petStory/desktop_petstory/block-2/arrowR.svg" alt="arrowR">
+                        </div>
+                    </div>
+                    <div class="services__container">
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/pandas.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">giant Pandas</h5>
+                                        <div class="services__locate-animal">Native to Southwest China</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed">
+                                        <img src="../petStory/desktop_petstory/block-2/bamboo.svg" class="services__feed-spec_0" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/banana.svg" class="services__feed-spec_1" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/eagle.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Eagles</h5>
+                                        <div class="services__locate-animal">Native to South America</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed_m">
+                                        <img src="../petStory/desktop_petstory/block-2/steak_icon.svg" class="services__feed-spec_2" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/fish_icon.svg" class="services__feed-spec_3" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/gorilla.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Gorillas</h5>
+                                        <div class="services__locate-animal">Native to Congo</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed">
+                                        <img src="../petStory/desktop_petstory/block-2/bamboo.svg" class="services__feed-spec_0" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/banana.svg" class="services__feed-spec_1" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/sloth.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Two-toed Sloth</h5>
+                                        <div class="services__locate-animal">Mesoamerica, South America</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed">
+                                        <img src="../petStory/desktop_petstory/block-2/bamboo.svg" class="services__feed-spec_0" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/banana.svg" class="services__feed-spec_1" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/cheetah.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">cheetahs</h5>
+                                        <div class="services__locate-animal">Native to Africa</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed_m">
+                                        <img src="../petStory/desktop_petstory/block-2/steak_icon.svg" class="services__feed-spec_2" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/fish_icon.svg" class="services__feed-spec_3" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/pengium.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Penguins</h5>
+                                        <div class="services__locate-animal">Native to Antarctica</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed_m">
+                                        <img src="../petStory/desktop_petstory/block-2/steak_icon.svg" class="services__feed-spec_2" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/fish_icon.svg" class="services__feed-spec_3" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/alligator.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Alligators</h5>
+                                        <div class="services__locate-animal">Native to Southeastern U. S.</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed_m">
+                                        <img src="../petStory/desktop_petstory/block-2/steak_icon.svg" class="services__feed-spec_2" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/fish_icon.svg" class="services__feed-spec_3" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/secondKit/coala.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Coalas</h5>
+                                        <div class="services__locate-animal">Native to Australia</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed">
+                                        <img src="../petStory/desktop_petstory/block-2/bamboo.svg" class="services__feed-spec_0" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/banana.svg" class="services__feed-spec_1" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/secondKit/hippopotam.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Hippopotams</h5>
+                                        <div class="services__locate-animal">Native to Africa</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed">
+                                        <img src="../petStory/desktop_petstory/block-2/bamboo.svg" class="services__feed-spec_0" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/banana.svg" class="services__feed-spec_1" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/secondKit/kenguru.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Kengurus</h5>
+                                        <div class="services__locate-animal">Native to Australia</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed_m">
+                                        <img src="../petStory/desktop_petstory/block-2/steak_icon.svg" class="services__feed-spec_2" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/fish_icon.svg" class="services__feed-spec_3" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/secondKit/orangutan.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Orangutans</h5>
+                                        <div class="services__locate-animal">Native to islands of Sumatra and Borneo
+                                        </div>
+                                    </div>
+                                    <div class="services__suvwrap-feed">
+                                        <img src="../petStory/desktop_petstory/block-2/bamboo.svg" class="services__feed-spec_0" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/banana.svg" class="services__feed-spec_1" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/secondKit/redPanda.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Red Pandas</h5>
+                                        <div class="services__locate-animal">Native to Australia</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed">
+                                        <img src="../petStory/desktop_petstory/block-2/bamboo.svg" class="services__feed-spec_0" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/banana.svg" class="services__feed-spec_1" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sets-animal">
+                            <div class="services__card-animal">
+                                <img src="../petStory/desktop_petstory/block-2/secondKit/tucan.jpg" class="services__image-animal" alt="animal">
+                                <div class="servises__info-animal">
+                                    <div class="services__subwrap-info">
+                                        <h5 class="services__name-animal">Tucans</h5>
+                                        <div class="services__locate-animal">Native to Africa</div>
+                                    </div>
+                                    <div class="services__suvwrap-feed">
+                                        <img src="../petStory/desktop_petstory/block-2/bamboo.svg" class="services__feed-spec_0" alt="food">
+                                        <img src="../petStory/desktop_petstory/block-2/banana.svg" class="services__feed-spec_1" alt="food">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__wrap-button">
+                    <a href="#" class="services__button button">
+                        <span class="services__button-text">choose your favorite</span>
+                    </a>
+                </div>
+                <img src="../petStory/desktop_petstory/block-2/strelitzia-640.png" alt="plant-decor" class="services__plant-decor_R320">
+                <img src="../petStory/desktop_petstory/block-2/palm-640.png" alt="plant-decor" class="services__plant-decor_L320">
+                <img src="../petStory/desktop_petstory/block-2/palm_foto-1000.png" alt="plant-decor" class="services__plant-decor_L1000">
+                <img src="../petStory/desktop_petstory/block-2/palm_foto.png" alt="plant-decor" class="services__plant-decor_L">
+                <img src="../petStory/desktop_petstory/block-2/strelitzia 1.png" alt="plant-decor" class="services__plant-decor_R">
+            </section>
+            <!-- -----------------------------------------block-3-------------------------- -->
+            <section class="page__pick-and-feed pick-and-feed">
+                <div class="pick-and-feed__container _container">
+                    <div class="pick-and-feed__about">
+                        <h3 class="pick-and-feed__title">Pick and feed a friend</h3>
+                        <div class="pick-and-feed__wrap-text">
+                            <div class="pick-and-feed__line-1">
+                                We know the animals bring you joy,
+                                and in these extraordinary times, we’re glad.
+                            </div>
+                            <div class="pick-and-feed__line-2">
+                                During a time when the COVID-19 epidemic is
+                                touching all of our lives, we’re proud and
+                                glad that people around the world find joy in PetStory.
+                            </div>
+                            <div class="pick-and-feed__line-3">
+                                Even though the zoo has reopened, we need you now more than
+                                ever to help us deal with these problems. Please consider
+                                a gift to our
+                                <div class="pick-and-feed__wrap-link">
+                                    <a href="" class="pick-and-feed__support">Emergency Support Fund</a>
+                                    <div class="pick-and-feed__line-decor"></div>
+                                </div>
+                                <span> .</span>
+                            </div>
+                        </div>
+                        <div class="pick-and-feed__work-scheme">
+                            <h3 class="pick-and-feed__subtitle">
+                                How it works
+                            </h3>
+                            <div class="pick-and-feed__icon-scheme">
+                                <div class="pick-and-feed__container-icon">
+                                    <div class="pick-and-feed__box">
+                                        <img src="../petStory/desktop_petstory/block-3/pay.png" alt="icon" class="pick-and-feed__icon">
+                                    </div>
+                                    <div class="pick-and-feed__describe">Pay with card</div>
+                                </div>
+                                <img src="../petStory/desktop_petstory/block-3/Vector.svg" class="pick-and-feed__arrow">
+                                <img src="../petStory/desktop_petstory/block-3/arrow.png" class="pick-and-feed__green-arrow">
+                                <div class="pick-and-feed__container-icon">
+                                    <div class="pick-and-feed__box">
+                                        <img src="block-3/zoo.png" alt="icon" class="pick-and-feed__icon">
+                                    </div>
+                                    <div class="pick-and-feed__describe">Payment goes to the zoo</div>
+                                </div>
+                                <img src="../petStory/desktop_petstory/block-3/Vector.svg" class="pick-and-feed__arrow">
+                                <img src="../petStory/desktop_petstory/block-3/arrow.png" class="pick-and-feed__green-arrow">
+                                <div class="pick-and-feed__container-icon">
+                                    <div class="pick-and-feed__box">
+                                        <img src="block-3/monkey.png" alt="icon" class="pick-and-feed__icon">
+                                    </div>
+                                    <div class="pick-and-feed__describe">Your favourite animal gets delicious dish</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="pick-and-feed__button button">
+                            <span class="pick-and-feed__button-text">Feed a friend now</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- -----------------------------------------block-4-------------------------- -->
+            <section class="page__testimonials testimonials">
+                <div class="testimonials__container _container">
+                    <div class="testimonials__about">
+                        <h3 class="testimonials__title">Testimonials</h3>
+                        <div class="testimonials__wrap-feedback-card" id="surface-swiper">
+                            <div class="testimonials__wrap-card">
+                                <div class="testimonials__card" id="card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Michael John </div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi molestias sed
+                                        aliquam reiciendis ducimus, quod sapiente error harum dolores atque vero
+                                        dignissimos ex voluptatum soluta dolorum dolore omnis. Alias, officiis.
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card" id="card">
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava1.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Oskar Samborsky</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis accusantium, illum
+                                        vel hic minima id magnam, nam, blanditiis ducimus ea nisi delectus. Rerum
+                                        nostrum provident consequuntur et dolore, consectetur ullam?
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card">
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava2.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Fredericka Michelin</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card">
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava3.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Mila Riksha</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card">
+
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava4.svg" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Gregor York</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                    </article>\
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card">
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Paul Sanderson</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card">
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Adelina Bukovsky</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card">
+
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Jack Brown</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card">
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Julia Linkoln</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card">
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Sandra Atkinson</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                            <div class="testimonials__wrap-card">
+                                <div class="testimonials__card">
+                                    <div class="testimonials__header">
+                                        <img src="../petStory/desktop_petstory/block-4/ava.png" class="testimonials__avatar" alt="avatar">
+                                        <div class="testimonials__subwrap-header">
+                                            <div class="testimonials__name">Kevin 0'Nill</div>
+                                            <div class="testimonials__location">Local Austria • Today</div>
+                                        </div>
+                                    </div>
+                                    <article class="testimonials__text-feedback">
+                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo
+                                        I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one
+                                        jf the ways to instill a love for animals.The best online zoo I’ve met. My son
+                                        delighted very much ljves to watch gouillas.
+                                        The best online zoo I’ve met. My son delighted very much ljves to watch
+                                        gouillas. Online zoo is one jf the ways to instill a love for animals.The best
+                                        online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                                        zoo is one jf the ways to instill a love for animals.
+                                    </article>
+                                    <div class="testimonials__cover-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials__wrap-line">
+                            <div class="testimonials__line-decor">
+                                <div class="testimonials__line-marker"></div>
+                            </div>
+                        </div>
+                        <div class="testimonials__wrap-button">
+                            <a href="#" class="testimonials__button button">
+                                <span class="testimonials__button-text">leave feedback</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <img src="../petStory/desktop_petstory/block-4/leav_foto.png" class="testimonials__decor-leave" alt="leave">
+                <img src="../petStory/desktop_petstory/block-4/leav_foto_320.svg" class="testimonials__decor-leave_320" alt="leave">
+            </section>
+
+        </main>
+        <!-- -----------------------------------------footer-------------------------- -->
+        <footer id="footer">
+            <form class="footer__container _container" action="#">
+                <div class="footer__wrap-inf">
+                    <div class="footer__first-block">
+                        <div class="footer__logo logo logo__hide">
+                            <a href="index.html" class="logo">
+                                <div class="logo_container fix-border">
+                                    <h2 class="logo-text">PetStory <br> online</h2>
+                                    <img class="logo_image-footer" src="../petStory/desktop_petstory/header/bamboo.svg" alt="logo">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="footer__wrap-logo-320">
+                            <div class="footer__logo_320">PetStory online</div>
+                            <img class="logo__image-footer_320" src="../petStory/desktop_petstory/header/bamboo.svg" alt="logo">
+                        </div>
+                        <div class="footer__wrap-piece-subscribe">
+                            <h3 class="footer__subscribe-title">Subscribe to our news</h3>
+                            <div class="footer__wrap-submit">
+                                <input id="footer__input" type="email" placeholder="Enter your email">
+                                <button id="footer__button-submit" form="footer__input">
+                                    <span id="footer__text-button">Submit</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__insert-block">
+                        <div class="footer__insert-social-net">
+                            <a href="https://www.facebook.com" class="footer__insert-logo-container">
+                                <img src="../petStory/desktop_petstory/footer/Fill 211.svg" alt="logo" class="footer__insert-logo-icon">
+                            </a>
+                        </div>
+                        <div class="footer__insert-social-net">
+                            <a href="https://twitter.com" class="footer__insert-logo-container">
+                                <img src="../petStory/desktop_petstory/footer/Fill 172.svg" alt="logo" class="footer__insert-logo-icon">
+                            </a>
+                        </div>
+                        <div class="footer__insert-social-net">
+                            <a href="https://www.instagram.com" class="footer__insert-logo-container">
+                                <img src="../petStory/desktop_petstory/footer/Fill 167.svg" alt="logo" class="footer__insert-logo-icon">
+                            </a>
+                        </div>
+                        <div class="footer__insert-social-net">
+                            <a href="https://www.youtube.com" class="footer__insert-logo-container">
+                                <img src="../petStory/desktop_petstory/footer/Fill 214.svg" alt="logo" class="footer__insert-logo-icon">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__second-block">
+                        <a href="" class="footer__button-donate">
+                            <span class="footer__text-button">donate for volunteers</span>
+                        </a>
+                    </div>
+                    <div class="footer__third-block">
+                        <div class="footer__wrap-social-net">
+                            <div class="footer__social-net">
+                                <a href="https://www.facebook.com" class="footer__logo-container">
+                                    <img src="../petStory/desktop_petstory/footer/Fill 211.svg" alt="logo" class="footer__logo-icon">
+                                </a>
+                                <a href="https://www.facebook.com" class="footer__name-social-net">Facebook</a>
+                            </div>
+                            <div class="footer__social-net">
+                                <a href="https://twitter.com" class="footer__logo-container">
+                                    <img src="../petStory/desktop_petstory/footer/Fill 172.svg" alt="logo" class="footer__logo-icon">
+                                </a>
+                                <a href="https://twitter.com" class="footer__name-social-net">Twitter</a>
+                            </div>
+                            <div class="footer__social-net">
+                                <a href="https://www.instagram.com" class="footer__logo-container">
+                                    <img src="../petStory/desktop_petstory/footer/Fill 167.svg" alt="logo" class="footer__logo-icon">
+                                </a>
+                                <a href="https://www.instagram.com" class="footer__name-social-net">Instagram</a>
+                            </div>
+                            <div class="footer__social-net">
+                                <a href="https://www.youtube.com" class="footer__logo-container">
+                                    <img src="../petStory/desktop_petstory/footer/Fill 214.svg" alt="logo" class="footer__logo-icon">
+                                </a>
+                                <a href="https://www.youtube.com" class="footer__name-social-net">YouTube</a>
+                            </div>
+                        </div>
+                        <div class="footer__wrap-designed">
+                            <div class="footer__designed">Designed by Alisa Samborskaya</div>
+                            <div class="footer__study-platform">©RSSchool & ©Yem Digital 2021</div>
+                        </div>
+                    </div>
+                    <div class="footer__wrap-navigation">
+                        <div class="footer__wrap-about">
+                            <div class="footer__wrap-items-about">
+                                <a href="index.html" class="footer__about">About</a>
+                            </div>
+                            <div class="footer__wrap-items-about">
+                                <a href="" class="footer__map">Map</a>
+                            </div>
+                            <div class="footer__wrap-items-about">
+                                <a href="" class="footer__zoos">Zoos</a>
+                            </div>
+                            <div class="footer__wrap-items-about">
+                                <a href="" class="footer__contact-us">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </footer>
+    </div>
+    <script src="../petStory/desktop_petstory/common/js.js"></script>
+</body>
+
+</html>

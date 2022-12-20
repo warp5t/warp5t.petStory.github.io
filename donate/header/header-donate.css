@@ -1,0 +1,16 @@
+.menu__link-donate {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.menu__link-donate:hover {
+    cursor: default;
+}

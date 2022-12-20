@@ -1,0 +1,32 @@
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container{
+
+    max-width: 1160px;
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+@media(max-width:1215px){
+    ._container{
+        max-width: 1000px;
+    }
+}
+@media(max-width:335px){
+    ._container{
+        margin: 0;
+    }
+}
+
+.page{
+    position: relative;
+    flex: 1 1 auto;
+    z-index: 0;
+}
+
+h1 h3{
+    margin:0;
+}
