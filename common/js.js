@@ -494,6 +494,29 @@ var checkSwipe = false;
  },false);
 
  //         --------------- touch-swiping-Mobile ---------------
+ let permissionScrollPage = 20;
+ let startPageX, endPageX;
+ switherTouch = true;
+ surfaceTestimonials.addEventListener('touchstart', function(e){
+   console.log("");
+   var touchobj_start = e.changedTouches[0];
+   startPageX = touchobj_start.pageX;
+ });
+ surfaceTestimonials.addEventListener('touchmove', function(e){
+   var touchobj_end = e.changedTouches[0];
+   endPageX = touchobj_end.pageX;
+   let distance = Math.abs(endPageX - startPageX);
+
+   if(permissionScrollPage > distance){
+      if(switherTouch == true){
+         swiping();
+         switherTouch = false;
+      }
+      
+   }
+}, false);
+
+function swiping(){
 
 
  surfaceTestimonials.addEventListener('touchstart', function(e){
@@ -505,7 +528,7 @@ var checkSwipe = false;
 });
 
 surfaceTestimonials.addEventListener('touchmove', function(e){checkSwipe = true;
- e.preventDefault();
+e.preventDefault();
 }, false);
 
 surfaceTestimonials.addEventListener('touchend', function(e){
@@ -528,6 +551,7 @@ if (elapsedTime <= allowedTime){
 }
 e.preventDefault();
 }, false);
+}
 
  //                ------------------ pop-up ------------------
  let blockTestimon = document.querySelector('.testimonials__about');
@@ -585,7 +609,7 @@ e.preventDefault();
                || item.target.classList.contains('cross') && popUpClicked == true){
                wrapPopUp.remove();
                console.log(popUpClicked);
-              // popUpClicked = false;
+               popUpClicked = false;
             }
          });
       }
