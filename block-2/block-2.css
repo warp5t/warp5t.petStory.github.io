@@ -254,31 +254,6 @@
         top:40px;
     }
 }
-.whiteSpace-0{
-    display: none;
-}
-.whiteSpace-1{
-    
-}
-@media(max-width:999px){
-    .services__flowers-adaptive{
-        display: inline-block;
-    }
-    .whiteSpace-0{
-        display: none;
-    }
-    .whiteSpace-1{
-        display:inline-block;
-    }
-}
-@media(max-width:400px){
-    .whiteSpace-0{
-        display: none;
-    }
-    .whiteSpace-1{
-        display:none;
-    }
-}
 @media(max-width:400px){
     .services__flowers-adaptive{
         display:none;

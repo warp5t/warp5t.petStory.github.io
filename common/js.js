@@ -332,7 +332,7 @@ function show(direction){
  swipeDetect(surfacePets);
 
  // -------------------------------swiperTestimonials-----------------------------------------------
- const swiperTestimonials = (el) =>{
+ //const swiperTestimonials = (el) =>{
  let surfaceTestimonials = document.querySelector('.testimonials__wrap-feedback-card');
  const lineDecor = document.querySelector('.testimonials__line-decor');
  const lineMarker = document.querySelector('.testimonials__line-marker');
@@ -382,15 +382,28 @@ function interCalc(xCoord){
    }
    else if(xCoord < pxlProgress){
          direction = 'left';
-    pxlProgress = pxlProgress - xCoord;
-    equivalStep = Math.trunc(pxlProgress/segment);
-    if(equivalStep * segment < xCoord && checkSwipe == false){equivalStep++;}
-    else if(pxlProgress/xCoord >= 1 && checkSwipe == false){equivalStep++;}
-    if(equivalStep < 1){equivalStep = 1}
+         console.log('left');
+         console.log('xCoord / progressSwipe : ',xCoord);
+         console.log('pxlProgress : ', pxlProgress);
+         console.log('segment : ', segment);
+
+   if(visiblingCards === 3){
+      pxlProgress = pxlProgress - xCoord;
+      equivalStep = Math.trunc(pxlProgress/segment);
+   }
+   else if(visiblingCards > 3){
+      pxlProgress = pxlProgress - xCoord;
+      equivalStep = Math.trunc(pxlProgress/segment);
+      if(equivalStep * segment < xCoord && checkSwipe == false){equivalStep++;}
+      else if(pxlProgress/xCoord >= 1 && checkSwipe == false){equivalStep++;}
+      if(equivalStep < 1){equivalStep = 1}
+    }
    }
    while(equivalStep > 0){
     if(direction == 'left'){
+       markerCount++;
        prcntProgr = prcntProgr - stepPrcnt;
+       //console.log('equivalStep : ', equivalStep);
        iteratorCalc--;
        surfaceTestimonials.style.right = (iteratorCalc*stepPxl)+'px';
        equivalStep--;
@@ -452,9 +465,10 @@ wrapLine.addEventListener('mouseup',function(e){
 
  function leftSliding(){
    if(iteratorSlide < stepCount){
-
    iteratorSlide++;
    progressSwipe = segment * iteratorSlide;
+   console.log({progressSwipe});
+   console.log(iteratorSlide);
    interCalc(progressSwipe);
    }
  }
@@ -463,10 +477,12 @@ wrapLine.addEventListener('mouseup',function(e){
    if(iteratorSlide > 0){
    iteratorSlide--;
    progressSwipe = segment * iteratorSlide;
+   console.log({progressSwipe});
+   console.log(iteratorSlide);
    interCalc(progressSwipe);
    }
  }
-//           ------------- touch-swiping-PC -----------------
+//           ------------- mouse-swiping-PC -----------------
 var checkSwipe = false;
  surfaceTestimonials.addEventListener('mousedown', function(e){
    startX = e.pageX;
@@ -494,69 +510,95 @@ var checkSwipe = false;
  },false);
 
  //         --------------- touch-swiping-Mobile ---------------
- let permissionScrollPage = 20;
+ let permissionYScrollPage = 60;
  let startPageX, endPageX;
- switherTouch = true;
- surfaceTestimonials.addEventListener('touchstart', function(e){
+ let switcher;
+ var markerCount = 0;
+ surfaceTestimonials.addEventListener('touchstart', function(e){ switcher = true;
    console.log("");
    var touchobj_start = e.changedTouches[0];
    startPageX = touchobj_start.pageX;
  });
- surfaceTestimonials.addEventListener('touchmove', function(e){
+
+ surfaceTestimonials.addEventListener('touchend', function(e){
    var touchobj_end = e.changedTouches[0];
    endPageX = touchobj_end.pageX;
-   let distance = Math.abs(endPageX - startPageX);
+   let distance = endPageX - startPageX;
+  // console.log(distance); 
+  console.log(permissionYScrollPage , '---', distance);
 
-   if(permissionScrollPage > distance){
-      if(switherTouch == true){
-         swiping();
-         switherTouch = false;
-      }
-      
+  if(Math.abs(distance) > permissionYScrollPage){
+   if(distance > 0 && switcher == true){
+    //  markerCount++;
+      rightSliding();
+      switcher = false;
+      console.log(switcher);
    }
-}, false);
-
-function swiping(){
-
-
- surfaceTestimonials.addEventListener('touchstart', function(e){
-   var touchobj = e.changedTouches[0];
-   startX = touchobj.pageX;
-   startY = touchobj.pageY;
-   startTime = new Date().getTime();
-   e.preventDefault();
-});
-
-surfaceTestimonials.addEventListener('touchmove', function(e){checkSwipe = true;
-e.preventDefault();
-}, false);
-
-surfaceTestimonials.addEventListener('touchend', function(e){
-var touchobj = e.changedTouches[0];
-distX = touchobj.pageX - startX;
-distY = touchobj.pageY - startY;
-elapsedTime = new Date().getTime() - startTime;
-if (elapsedTime <= allowedTime){
-  if (Math.abs(distX) >= thresholdX && Math.abs(distY) <= restraintY){
-   
-      if (distX > 0) {
-         console.log('check');
-         rightSliding();
-      }
-      else if(distX < 0){
-         leftSliding();
-         console.log('check-1');
-      }
+   else if(distance < 0 && switcher == true){
+    //  markerCount++;
+      leftSliding();
+      switcher = false;
+   }
+   console.log({markerCount});
+   markerCount = 0;
   }
-}
-e.preventDefault();
-}, false);
-}
 
+
+
+
+   // if(permissionYScrollPage < distance){
+     
+   //    if(swither == true){
+   //       swiping();
+   //       swither = false;
+   //    }
+   //    distance = 0;
+   //    console.log({swither});
+   // }
+}, false);
+
+//function swiping(){
+//console.log('swiping');
+
+//  surfaceTestimonials.addEventListener('touchstart', function(e){
+//    // if(swither == true){
+//        var touchobj = e.changedTouches[0];
+//        startX = touchobj.pageX;
+//    startY = touchobj.pageY;
+//    startTime = new Date().getTime();
+//    e.preventDefault();
+//  //}
+// });
+
+// surfaceTestimonials.addEventListener('touchmove', function(e){checkSwipe = true;
+//  e.preventDefault();
+// }, false);
+
+// surfaceTestimonials.addEventListener('touchend', function(e){
+// var touchobj = e.changedTouches[0];
+// distX = touchobj.pageX - startPageX;
+// distY = touchobj.pageY - startY;
+// elapsedTime = new Date().getTime() - startTime;
+// if (elapsedTime <= allowedTime){
+//   if (Math.abs(distX) >= thresholdX && Math.abs(distY) <= restraintY){
+   
+//       if (distX > 0) {
+//          console.log('check');
+//          rightSliding();
+//       }
+//       else if(distX < 0){
+//          leftSliding();
+//          console.log('check-1');
+//       }
+//   }
+// }
+// e.preventDefault();
+// }, false);
+//}
  //                ------------------ pop-up ------------------
  let blockTestimon = document.querySelector('.testimonials__about');
  let popUpClicked = false;
- let popUp, wrapPopUp;
+ var popUp, wrapPopUp;
  let crossElement = "<div class='cross'></div>";
  collectTestimon.forEach(function(item,index){
    item.addEventListener('click',function(item){
@@ -590,10 +632,11 @@ e.preventDefault();
         });
    });
  });
+ let previousItemClose = 1;
  collectTestimon.forEach(function(item,index){
    item.addEventListener('touchend',function(item){
       if(checkSwipe == false){
-         if(popUpClicked == false){
+         if(popUpClicked == false && previousItemClose == 0){
          popUp = document.createElement('div');
          popUp = this.cloneNode(true);
          popUp.classList.add('pop-up');
@@ -603,13 +646,16 @@ e.preventDefault();
          wrapPopUp.appendChild(popUp);
          blockTestimon.appendChild(wrapPopUp);
          popUpClicked = true;
+         previousItemClose++;
          }
          wrapPopUp.addEventListener('touchstart',function(item,index){
             if(item.target.classList.contains('wrap-pop-up') && popUpClicked == true
                || item.target.classList.contains('cross') && popUpClicked == true){
                wrapPopUp.remove();
-               console.log(popUpClicked);
                popUpClicked = false;
+            }
+            if(previousItemClose === 3){
+               previousItemClose = 0;
             }
          });
       }
@@ -660,9 +706,9 @@ function termsChanging(){
 
    setTimeout(termsChanging, 1000);
  })
-};
+//};
    ;
- swiperTestimonials(testimonialsContainer);
+ //swiperTestimonials(testimonialsContainer);
  var testimonialsContainer = document.querySelector('.testimonials__about');
 
 
