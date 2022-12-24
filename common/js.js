@@ -251,7 +251,7 @@ function show(direction){
 }
 
 
-// -------------------------------- sldeShow/swiping ----------------------------
+// -------------------------------- sldeShow/swiping-PC ----------------------------
  const swipeDetect = (el) =>{
    let startX = 0;
    let startY = 0;
@@ -288,42 +288,44 @@ function show(direction){
       }
       e.preventDefault();
     },false);
-
-    surfacePets.addEventListener('touchstart', function(e){
+// ---------------------------- touch-swiping ---------------------------------------------
+let switcher;
+let endX;
+    surfacePets.addEventListener('touchstart', function(e){ 
       console.log('check');
-        if (e.target.classList.contains('services__circle-arrow-L')) {
-         toLeft();
-        }
-        else if(e.target.classList.contains('services__circle-arrow-R')) {
-         toRight();
-        }
         var touchobj = e.changedTouches[0];
         startX = touchobj.pageX;
-        startY = touchobj.pageY;
-        startTime = new Date().getTime();
-        e.preventDefault();
+   //     startY = touchobj.pageY;
+     //   startTime = new Date().getTime();
+      //  e.preventDefault();
     }, false);
 
-    surfacePets.addEventListener('touchmove', function(e){
-      e.preventDefault();
-     // console.log(e);
-  }, false);
+//     surfacePets.addEventListener('touchmove', function(e){
+//      e.preventDefault();
+//      console.log(e);
+//   }, false);
 
   surfacePets.addEventListener('touchend', function(e){
+
+
    var touchobj = e.changedTouches[0];
-   distX = touchobj.pageX - startX;
-   distY = touchobj.pageY - startY;
-   elapsedTime = new Date().getTime() - startTime;
-   if (elapsedTime <= allowedTime){
-       if (Math.abs(distX) >= thresholdX && Math.abs(distY) <= restraintY){
-           if (distX > 0) {
+   endX = touchobj.pageX;
+   distX = endX - startX;
+ //  distY = touchobj.pageY - startY;
+ //  elapsedTime = new Date().getTime() - startTime;
+  // if (elapsedTime <= allowedTime){
+       if (Math.abs(distX) >= thresholdX){
+         switcher = true;
+           if (distX > 0 && switcher == true) {
             toRight();
+            switcher = false;
            }
-           else {
+           else if(distX < 0 && switcher == true){
             toLeft();
+            switcher = false;
            }
        }
-   }
+  // }
    e.preventDefault();
 }, false);
 
@@ -332,7 +334,7 @@ function show(direction){
  swipeDetect(surfacePets);
 
  // -------------------------------swiperTestimonials-----------------------------------------------
- //const swiperTestimonials = (el) =>{
+ const swiperTestimonials = (el) =>{
  let surfaceTestimonials = document.querySelector('.testimonials__wrap-feedback-card');
  const lineDecor = document.querySelector('.testimonials__line-decor');
  const lineMarker = document.querySelector('.testimonials__line-marker');
@@ -514,7 +516,7 @@ var checkSwipe = false;
  let startPageX, endPageX;
  let switcher;
  var markerCount = 0;
- surfaceTestimonials.addEventListener('touchstart', function(e){ switcher = true;
+ surfaceTestimonials.addEventListener('touchstart', function(e){ 
    console.log("");
    var touchobj_start = e.changedTouches[0];
    startPageX = touchobj_start.pageX;
@@ -527,7 +529,7 @@ var checkSwipe = false;
   // console.log(distance); 
   console.log(permissionYScrollPage , '---', distance);
 
-  if(Math.abs(distance) > permissionYScrollPage){
+  if(Math.abs(distance) > permissionYScrollPage){switcher = true;
    if(distance > 0 && switcher == true){
     //  markerCount++;
       rightSliding();
@@ -542,19 +544,6 @@ var checkSwipe = false;
    console.log({markerCount});
    markerCount = 0;
   }
-
-
-
-
-   // if(permissionYScrollPage < distance){
-     
-   //    if(swither == true){
-   //       swiping();
-   //       swither = false;
-   //    }
-   //    distance = 0;
-   //    console.log({swither});
-   // }
 }, false);
 
 //function swiping(){
@@ -706,9 +695,9 @@ function termsChanging(){
 
    setTimeout(termsChanging, 1000);
  })
-//};
+};
    ;
- //swiperTestimonials(testimonialsContainer);
+ swiperTestimonials(testimonialsContainer);
  var testimonialsContainer = document.querySelector('.testimonials__about');
 
 
