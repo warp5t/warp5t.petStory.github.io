@@ -319,7 +319,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin: -22px 0px 0px 0px;
+    margin: -22px 103px 0px 103px;
 }
 @media(max-width:860px){
     .footer__wrap-navigation{
