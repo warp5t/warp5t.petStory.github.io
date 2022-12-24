@@ -31,14 +31,11 @@ function resetStyle() {
 footer.onclick = function (event) {
    console.log('footer was clicked');
    let target = event.target;
-   // console.log('event.target: ', event.target);
-   // console.log('this: ', this);
-   // console.log('target.tagName: ', target.tagName);
    if (target == buttonText) {} else if (target == buttonSubmit) {} else resetStyle();
 }
 //-------------------------------burgerMenu--------------------------------------------
 function openMenu() {
-   
+
    let burgerMenu = document.querySelector('.header__burger-menu');
    let header = document.querySelector('.header');
    let headerLogo = document.querySelector('.header__logo');
@@ -88,7 +85,6 @@ function indexRand() {
          arrRandIndex[i] = index;
       }
    }
- // console.log('arrRandIndex:', arrRandIndex);
 }
 indexRand();
 
@@ -120,7 +116,6 @@ function sortingCards__I() {
       arrAmmounts = Math.trunc(ammountCards / width_6);
       sortingCards__II(width_6);
    }
- //  console.log('arrTwoDimens: ', arrTwoDimens);
 }
 sortingCards__I();
 
@@ -130,7 +125,6 @@ window.addEventListener('resize', function () {
    });
    sortingCards__I();
    firstDimens = 0;
-  // console.log(arrTwoDimens.length);
 })
 // --------------------------------randomizeCardsOrder-----------------------------------------------
 
@@ -295,25 +289,12 @@ let endX;
       console.log('check');
         var touchobj = e.changedTouches[0];
         startX = touchobj.pageX;
-   //     startY = touchobj.pageY;
-     //   startTime = new Date().getTime();
-      //  e.preventDefault();
     }, false);
 
-//     surfacePets.addEventListener('touchmove', function(e){
-//      e.preventDefault();
-//      console.log(e);
-//   }, false);
-
   surfacePets.addEventListener('touchend', function(e){
-
-
    var touchobj = e.changedTouches[0];
    endX = touchobj.pageX;
    distX = endX - startX;
- //  distY = touchobj.pageY - startY;
- //  elapsedTime = new Date().getTime() - startTime;
-  // if (elapsedTime <= allowedTime){
        if (Math.abs(distX) >= thresholdX){
          switcher = true;
            if (distX > 0 && switcher == true) {
@@ -325,7 +306,6 @@ let endX;
             switcher = false;
            }
        }
-  // }
    e.preventDefault();
 }, false);
 
@@ -384,11 +364,6 @@ function interCalc(xCoord){
    }
    else if(xCoord < pxlProgress){
          direction = 'left';
-         console.log('left');
-         console.log('xCoord / progressSwipe : ',xCoord);
-         console.log('pxlProgress : ', pxlProgress);
-         console.log('segment : ', segment);
-
    if(visiblingCards === 3){
       pxlProgress = pxlProgress - xCoord;
       equivalStep = Math.trunc(pxlProgress/segment);
@@ -405,7 +380,6 @@ function interCalc(xCoord){
     if(direction == 'left'){
        markerCount++;
        prcntProgr = prcntProgr - stepPrcnt;
-       //console.log('equivalStep : ', equivalStep);
        iteratorCalc--;
        surfaceTestimonials.style.right = (iteratorCalc*stepPxl)+'px';
        equivalStep--;
@@ -470,7 +444,6 @@ wrapLine.addEventListener('mouseup',function(e){
    iteratorSlide++;
    progressSwipe = segment * iteratorSlide;
    console.log({progressSwipe});
-   console.log(iteratorSlide);
    interCalc(progressSwipe);
    }
  }
@@ -479,8 +452,6 @@ wrapLine.addEventListener('mouseup',function(e){
    if(iteratorSlide > 0){
    iteratorSlide--;
    progressSwipe = segment * iteratorSlide;
-   console.log({progressSwipe});
-   console.log(iteratorSlide);
    interCalc(progressSwipe);
    }
  }
@@ -516,8 +487,7 @@ var checkSwipe = false;
  let startPageX, endPageX;
  let switcher;
  var markerCount = 0;
- surfaceTestimonials.addEventListener('touchstart', function(e){ 
-   console.log("");
+ surfaceTestimonials.addEventListener('touchstart', function(e){
    var touchobj_start = e.changedTouches[0];
    startPageX = touchobj_start.pageX;
  });
@@ -526,18 +496,15 @@ var checkSwipe = false;
    var touchobj_end = e.changedTouches[0];
    endPageX = touchobj_end.pageX;
    let distance = endPageX - startPageX;
-  // console.log(distance); 
   console.log(permissionYScrollPage , '---', distance);
 
   if(Math.abs(distance) > permissionYScrollPage){switcher = true;
    if(distance > 0 && switcher == true){
-    //  markerCount++;
       rightSliding();
       switcher = false;
       console.log(switcher);
    }
    else if(distance < 0 && switcher == true){
-    //  markerCount++;
       leftSliding();
       switcher = false;
    }
@@ -546,44 +513,6 @@ var checkSwipe = false;
   }
 }, false);
 
-//function swiping(){
-//console.log('swiping');
-
-//  surfaceTestimonials.addEventListener('touchstart', function(e){
-//    // if(swither == true){
-//        var touchobj = e.changedTouches[0];
-//        startX = touchobj.pageX;
-//    startY = touchobj.pageY;
-//    startTime = new Date().getTime();
-//    e.preventDefault();
-//  //}
-// });
-
-// surfaceTestimonials.addEventListener('touchmove', function(e){checkSwipe = true;
-//  e.preventDefault();
-// }, false);
-
-// surfaceTestimonials.addEventListener('touchend', function(e){
-// var touchobj = e.changedTouches[0];
-// distX = touchobj.pageX - startPageX;
-// distY = touchobj.pageY - startY;
-// elapsedTime = new Date().getTime() - startTime;
-// if (elapsedTime <= allowedTime){
-//   if (Math.abs(distX) >= thresholdX && Math.abs(distY) <= restraintY){
-   
-//       if (distX > 0) {
-//          console.log('check');
-//          rightSliding();
-//       }
-//       else if(distX < 0){
-//          leftSliding();
-//          console.log('check-1');
-//       }
-//   }
-// }
-// e.preventDefault();
-// }, false);
-//}
  //                ------------------ pop-up ------------------
  let blockTestimon = document.querySelector('.testimonials__about');
  let popUpClicked = false;
@@ -593,8 +522,6 @@ var checkSwipe = false;
    item.addEventListener('click',function(item){
       if(checkSwipe == false){
          if(popUpClicked == false){
-        // console.log(item.target,'e.target');
-        // console.log(this,'this');
          popUp = document.createElement('div');
          popUp = this.cloneNode(true);
          popUp.classList.add('pop-up');
@@ -656,9 +583,7 @@ var checkSwipe = false;
    });
  });
 
-
 //                  ---------------- adaptive -----------------
-
 
 function termsChanging(){
 
@@ -676,10 +601,6 @@ function termsChanging(){
    segment = lineDecor.offsetWidth / (stepCount+1);
    stepPrcnt = 100 / (stepCount+1);
    stepPxl = 324;
-   // console.log({stepPrcnt});
-   // console.log({segment});
-   // console.log({stepCount});
-   // console.log(lineDecor.offsetWidth);
    }
    else if(body.offsetWidth < 981){
       visiblingCards = 3;
